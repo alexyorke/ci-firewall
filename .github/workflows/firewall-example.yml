@@ -22,3 +22,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Set up firewall
         run: chmod a+x setup_firewall.sh && sudo bash setup_firewall.sh;
+
+      - name: Try to contact example.com
+        run: curl https://example.com && exit 1 || exit 0
